@@ -1,0 +1,39 @@
+div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  button {
+    margin: 20px 15px 0px 0px;
+  }
+  
+  button {
+    margin: 20px 15px 0px 0px;
+  }
+  
+  #imageMovie {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  
+  #image {
+    display: block;
+    margin-left: 0;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 60%;
+    
+  }
+  
+  #formFileLg {
+    margin-top: 40px;
+  }
+  
+  .titleCard {
+    padding-left: 20px;
+    padding-top: 0.5rem;
+    margin-top: 0.5px;
+    margin-bottom: 15px;
+    background-color: #3f51b5a4;
+    color: #fff;
+  }

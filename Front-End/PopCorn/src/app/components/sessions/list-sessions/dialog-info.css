@@ -1,0 +1,42 @@
+.matTitle {
+    background-color: #3f51b5a4
+}
+
+h1 {
+    color: #fff;
+}
+
+.btnActions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btnActions div{
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+    margin: 20px 15px 0px 0px;
+}
+
+.btnDelete {
+    background-color: #b00020;
+}
+
+.radioButton {
+    margin: 20px 0px 20px 0px;
+    border: 1px solid rgb(228, 228, 228);
+    padding-left: 10px;
+    width: 400px;
+
+}
+
+.selectDelete {
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    margin-top: 30px;
+}

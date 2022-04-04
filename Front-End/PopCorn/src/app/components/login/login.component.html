@@ -1,0 +1,27 @@
+<div class="login">
+    <mat-card class="mat-elevation-z8">
+        <form role="group" [formGroup]="formLogin">
+          <mat-card-title>
+            Acesso
+          </mat-card-title>
+          <mat-card-subtitle>
+            login para o sistema de gerenciamento PopCorn
+          </mat-card-subtitle>
+          <mat-form-field>
+            <input matInput placeholder="usuario" formControlName="userName" name="user">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="senha" formControlName="password" name="password">
+          </mat-form-field>
+        </form>
+        <div class="btn">
+          <button [disabled]="!formLogin.valid" mat-raised-button (click)="login()" color="primary">
+            Entrar
+          </button>
+        
+          <button mat-raised-button (click)="cancel()" color="danger">
+            Cancelar
+          </button>
+        </div>
+      </mat-card>
+</div>

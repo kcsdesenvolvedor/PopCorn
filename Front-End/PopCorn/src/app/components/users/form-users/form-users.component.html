@@ -1,0 +1,43 @@
+
+<mat-card class="mat-elevation-z8">
+    <form (ngSubmit)="onSubmit()">
+      <div [formGroup]="registerForm">
+        <mat-card class="titleCard mat-elevation-z4">
+          <h1>{{data.title}}</h1>
+        </mat-card>
+        <mat-form-field>
+          <mat-label>Nome</mat-label>
+          <input matInput type="text" formControlName="userName">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Role</mat-label>
+          <input matInput type="text" formControlName="role">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" formControlName="email">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Senha</mat-label>
+          <input matInput type="text" formControlName="password">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Confimar Senha</mat-label>
+            <input matInput type="text" formControlName="confirmarPassword">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Data de Criação</mat-label>
+            <input matInput type="text" formControlName="dateCreate">
+        </mat-form-field>
+        
+      </div>
+      
+      <button type="submit" mat-raised-button color="primary">
+      {{data.btnTitle}}
+      </button>
+      
+      <button mat-raised-button routerLink="users" color="danger">
+      Cancelar
+      </button>
+    </form>
+  </mat-card>

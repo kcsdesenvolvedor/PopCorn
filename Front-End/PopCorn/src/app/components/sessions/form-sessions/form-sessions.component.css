@@ -1,0 +1,54 @@
+div {
+    display: flex;
+    flex-direction: column;
+}
+  
+button {
+    margin: 20px 15px 0px 0px;
+}
+  
+button {
+    margin: 20px 15px 0px 0px;
+}
+
+.radioButton {
+    margin: 20px 0px 20px 0px;
+    border: 1px solid rgb(228, 228, 228);
+    padding-left: 10px;
+    width: 400px;
+
+}
+
+mat-radio-button {
+    margin: 20px;
+
+}
+
+.matDate {
+    width: 200px;
+}
+
+.matStart {
+    width: 200px;
+}
+
+.matMovie {
+    width: 50%;
+}
+
+.matTicket {
+    width: 200px;
+}
+
+.matRoom {
+    width: 200px;
+}
+
+.titleCreate {
+    padding-left: 20px;
+    padding-top: 0.5rem;
+    margin-top: 0.5px;
+    margin-bottom: 15px;
+    background-color: #3f51b5a4;
+    color: #fff;
+  }

@@ -1,0 +1,42 @@
+table {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .edit {
+    margin-right: 15px;
+  }
+  
+  .edit>i {
+    color: #d9cd26;
+  }
+  
+  .delete>i {
+    color: #e35e6b;
+  }
+
+  .info {
+    margin-left: 15px;
+  }
+
+  .info>i {
+    color: #3f51b5a4;
+  }
+  
+  .table-bar {
+    background-color: #3f51b5a4
+  }
+  
+  .white {
+    text-align: center;
+    color: #fff;
+  }
+  
+  input {
+    background-color: darkgrey;
+  }
+
+  button {
+    margin-bottom: 20px;
+  }

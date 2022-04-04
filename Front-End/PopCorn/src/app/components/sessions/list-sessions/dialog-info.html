@@ -1,0 +1,58 @@
+<div *ngIf="data.type == 'info'">
+    <mat-card class="mat-elevation-z4 matTitle">
+        <h1 mat-dialog-title>Informação da Sessão</h1>
+    </mat-card>
+<div mat-dialog-content>
+  <ul>
+    <li>
+      <span ><strong>Data da sessão: </strong></span>{{data.sessionDate | date: "dd/MM/yyyy"}}
+    </li>
+    <li>
+      <span ><strong>Início: </strong></span>{{data.startTime}}
+    </li>
+    <li>
+      <span ><strong>Fim: </strong></span>{{data.endTime}}
+    </li>
+    <li>
+        <span ><strong>Valor: </strong></span>{{data.ticketValue | currency : 'BRL'}}
+    </li>
+    <li>
+        <span ><strong>Animação: </strong></span>{{data.typeAnimation == 1 ? '3D' : '2D'}}
+    </li>
+    <li>
+        <span ><strong>Áudio: </strong></span>{{data.typeAudio == 1 ? 'Original' : 'Dublado'}}
+    </li>
+    <li>
+        <span ><strong>Filme: </strong></span>{{data.movieTitle}}
+    </li>
+    <li>
+        <span ><strong>Sala: </strong></span>{{data.roomId != 10 ? '0'+data.roomId : data.roomId}}
+    </li>
+  </ul>
+</div>
+</div>
+
+<mat-card *ngIf="data.type == 'delete'">
+  <mat-card class="mat-elevation-z4 matTitle">
+      <h1 mat-dialog-title>Delete</h1>
+  </mat-card>
+<div mat-dialog-content>
+  <p>Deseja deletar a Sessão:</p>
+  <p>Id: {{data.sessionId}}</p>
+  <p>Filme: {{data.movieTitle}}</p>
+</div>
+<div class="btnActions">
+  <div>
+    <button class="btnDelete" (click)="deleteSession(data.sessionId)" mat-raised-button color="primary">
+      Deletar
+      </button>
+      
+      <button mat-raised-button (click)="onNoClick()" color="danger">
+      Cancelar
+      </button>
+  </div>
+</div>
+<div class="selectDelete">
+  <mat-checkbox class="example-margin" (click)="checked()">Forçar Exclusão</mat-checkbox>
+</div>
+</mat-card>

@@ -1,0 +1,73 @@
+<button mat-raised-button (click)="create()" color="primary">
+  Adicionar Sessão
+</button>
+<div class="mat-elevation-z4">
+    <table mat-table [dataSource]="sessions">
+
+      <!-- Id Column -->
+      <ng-container matColumnDef="id">
+        <th class="white" mat-header-cell *matHeaderCellDef>Id</th>
+        <td mat-cell *matCellDef="let row">{{row.id}}</td>
+      </ng-container>
+      <!-- sessionDate Column -->
+      <ng-container matColumnDef="sessionDate">
+        <th class="white" mat-header-cell *matHeaderCellDef>Data</th>
+        <td mat-cell *matCellDef="let row">{{row.sessionDate | date: "dd/MM/yyyy"}}</td>
+      </ng-container>
+  
+      <!-- startTime Column -->
+      <ng-container matColumnDef="startTime">
+        <th class="white" mat-header-cell *matHeaderCellDef>Início</th>
+        <td mat-cell *matCellDef="let row"><strong>{{row.startTime}}</strong></td>
+      </ng-container>
+  
+      <!-- endTime Column -->
+      <ng-container matColumnDef="endTime">
+        <th class="white" mat-header-cell *matHeaderCellDef>Fim</th>
+        <td mat-cell *matCellDef="let row">{{row.endTime}}</td>
+      </ng-container>
+  
+      <!-- ticketValue Column -->
+      <ng-container matColumnDef="ticketValue">
+        <th class="white" mat-header-cell *matHeaderCellDef>Valor</th>
+        <td mat-cell *matCellDef="let row">{{row.ticketValue | currency : 'BRL'}}</td>
+      </ng-container>
+
+      <!-- typeAnimation Column -->
+      <ng-container matColumnDef="typeAnimation">
+        <th class="white" mat-header-cell *matHeaderCellDef>Animação</th>
+        <td mat-cell *matCellDef="let row">{{row.typeAnimation == 1 ? '3D' : '2D'}}</td>
+      </ng-container>
+      
+      <!-- typeAudio Column -->
+      <ng-container matColumnDef="typeAudio">
+        <th class="white" mat-header-cell *matHeaderCellDef>Áudio</th>
+        <td mat-cell *matCellDef="let row">{{row.typeAudio == 1 ? 'Original' : 'Dublado'}}</td>
+      </ng-container>
+
+      <!-- roomId Column -->
+      <ng-container matColumnDef="roomId">
+        <th class="white" mat-header-cell *matHeaderCellDef>Sala</th>
+        <td mat-cell *matCellDef="let row">{{row.roomId != 10 ? '0'+row.roomId : row.roomId}}</td>
+      </ng-container>
+  
+      <!-- Action Column -->
+      <ng-container matColumnDef="action">
+        <th class="white" mat-header-cell *matHeaderCellDef>Ações</th>
+        <td mat-cell *matCellDef="let row">
+          <a routerLink="/sessions" (click)="openInfo(row.id, row.movieId, 'delete')" class="delete">
+            <i class="material-icons">
+              delete
+            </i>
+          </a>
+          <a routerLink="/sessions" (click)="openInfo(row.id, row.movieId, 'info')" class="info">
+            <i class="material-icons">
+              info
+            </i>
+          </a>
+        </td>
+      </ng-container>
+      <tr class="table-bar" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>

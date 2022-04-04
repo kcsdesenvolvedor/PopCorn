@@ -1,0 +1,38 @@
+mat-card {
+
+    width: 98%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+mat-card-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+mat-card-subtitle {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 200px;
+}
+
+.btn {
+    text-align: center;
+    width: 100%;
+}
+
+button {
+    margin-right: 40px;
+    margin-left: 40px;
+}

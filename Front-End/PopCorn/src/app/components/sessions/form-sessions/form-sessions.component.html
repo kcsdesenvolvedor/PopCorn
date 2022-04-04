@@ -1,0 +1,62 @@
+<mat-card class="mat-elevation-z8">
+    <form (ngSubmit)="createSession()">
+        <div [formGroup]="registerForm">
+            <mat-card class="titleCreate mat-elevation-z4">
+                <h1>Adicionar Sessão</h1>
+              </mat-card>
+              <mat-form-field appearance="fill" class="matDate">
+                <mat-label>Data</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="sessionDate" [min]="dateLimited">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+          <mat-form-field class="matStart">
+            <mat-label>Horário Inicial (ex: 20:00)</mat-label>
+            <input matInput type="text" mask="Hh:m0" formControlName="startTime" (blur)="validateStart()">
+          </mat-form-field>
+          <mat-form-field class="matMovie">
+            <mat-label>Filme</mat-label> 
+            <mat-select formControlName="movieId">
+                <mat-option *ngFor="let movie of movies" [value]="movie.id">
+                  {{movie.title}}
+                </mat-option>
+              </mat-select>
+          </mat-form-field>
+          <div class="radioButton">
+            <mat-radio-group aria-label="Tipo de Animação"  formControlName="typeAnimation">
+                <mat-label>Tipo de Animação:</mat-label>
+                <mat-radio-button value="1">3D</mat-radio-button>
+                <mat-radio-button value="2">2D</mat-radio-button>
+              </mat-radio-group>
+          </div>
+          <div class="radioButton">
+            <mat-radio-group aria-label="Tipo de Áudio"  formControlName="typeAudio">
+                <mat-label>Tipo de Áudio:</mat-label>
+                <mat-radio-button value="1">Original</mat-radio-button>
+                <mat-radio-button value="2">Dublado</mat-radio-button>
+              </mat-radio-group>
+          </div>
+          <mat-form-field class="matTicket">
+            <mat-label>Valor</mat-label>
+            <input matInput id="inputTicket" required formControlName="ticketValue"
+             placeholder="0,00" currencyMask autocomplete="off">
+            </mat-form-field>
+            <mat-form-field class="matRoom">
+                <mat-label>Sala</mat-label>
+                <mat-select (click)="getRoomsBySession()" formControlName="roomId">
+                    <mat-option *ngFor="let room of rooms" [value]="room.id">
+                      {{room.name}}
+                    </mat-option>
+                  </mat-select>
+              </mat-form-field>
+        </div>
+        
+        <button type="submit" mat-raised-button color="primary">
+        Adicionar
+        </button>
+        
+        <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+        </button>
+      </form>
+</mat-card>
