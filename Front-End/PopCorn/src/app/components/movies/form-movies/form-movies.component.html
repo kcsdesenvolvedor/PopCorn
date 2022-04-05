@@ -21,18 +21,16 @@
           <img *ngIf="base64 != null" [src]="base64" alt="" id="image">
         </div>
         <span id="nameImage"></span>
-        <div>
-          <input class="form-control form-control-lg" id="formFileLg" type="file" alife-file-to-base64
-            (onFileChanged)="changeFile($event)" formControlName="image">
-        </div>
+        <input class="form-control form-control-lg" id="formFileLg" type="file" alife-file-to-base64
+          (onFileChanged)="changeFile($event)" formControlName="image">
       </div>
-      
+        
       <button type="submit" mat-raised-button color="primary">
-      {{data.btnTitle}}
-      </button>
-      
-      <button mat-raised-button (click)="cancel()" color="danger">
-      Cancelar
-      </button>
+        {{data.btnTitle}}
+        </button>
+        
+        <button mat-raised-button (click)="cancel()" color="danger">
+        Cancelar
+        </button>
     </form>
   </mat-card>

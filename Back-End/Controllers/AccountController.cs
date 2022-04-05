@@ -29,7 +29,7 @@ namespace PopCorn.Web.Controllers
                 var user = _userService.Authenticate(model.UserName, model.Password);
 
                 if (user == null)
-                    return BadRequest(new { message = "Usuário ou senha inválidos" });
+                    return BadRequest(new { message = "Usuário ou senha inválidos", type = "info" });
 
                 return Ok(user);
             }

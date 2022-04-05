@@ -96,6 +96,9 @@ export class FormMoviesComponent implements OnInit {
   }
 
   validationDuration(){
+    if(this.registerForm.controls['duration'].value == null)
+      return false;
+      
     const durationMovie = this.registerForm.controls['duration'].value;
     const durationSplit = durationMovie.split(':');
     if(durationSplit.length == 2 && !isNaN(durationSplit[0]) && !isNaN(durationSplit[1])){

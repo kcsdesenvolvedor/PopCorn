@@ -41,7 +41,7 @@ export class LoginComponent implements OnInit {
         
       },
       error: e => {
-        this.alertNotificationService.showMessage(e, 'info');
+        this.alertNotificationService.showMessage(e.error.message, e.type);
         console.log("Deu erro");
       }
     })

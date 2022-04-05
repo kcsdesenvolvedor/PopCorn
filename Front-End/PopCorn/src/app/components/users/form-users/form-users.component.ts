@@ -17,6 +17,7 @@ export class FormUsersComponent implements OnInit {
   user: User;
   isUpdate: boolean = false;
   registerForm: FormGroup;
+  confirmarSenha: string = '';
 
   constructor(
     private router: Router,
@@ -33,7 +34,6 @@ export class FormUsersComponent implements OnInit {
     }else if(this.data.operation == "update"){
       this.isUpdate = true;
       this.createForm();
-      this.registerForm.controls['confirmaPassword'].setValue(this.data.password);
       this.registerForm.setValue(this.data.user);
     }else if(this.data.operation == "delete"){
       this.createFormDisabled();
@@ -54,11 +54,11 @@ export class FormUsersComponent implements OnInit {
   createForm(){
     this.registerForm = new FormGroup({
       id: new FormControl(),
-      userName: new FormControl('', [Validators.required]),
-      role: new FormControl('', [Validators.required]),
-      password: new FormControl('', [Validators.required]),
-      confirmarPassword: new FormControl('', [Validators.required]),
-      email: new FormControl('', [Validators.required]),
+      userName: new FormControl('', Validators.required),
+      role: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+      token: new FormControl(),
+      email: new FormControl('', Validators.required),
       dateCreate: new FormControl({value: '', disabled: true})
     });
   }
@@ -69,14 +69,15 @@ export class FormUsersComponent implements OnInit {
       userName: new FormControl({value: '', disabled: true}),
       role: new FormControl({value: '', disabled: true}),
       password: new FormControl({value: '', disabled: true}),
-      confirmarPassword: new FormControl({value: '', disabled: true}),
+      token: new FormControl({value: '', disabled: true}),
       email: new FormControl({value: '', disabled: true}),
       dateCreate: new FormControl({value: '', disabled: true}),
     });
   }
 
   createUser(){
-    if (this.registerForm.controls['password'].value == this.registerForm.controls['confirmarPassword'].value) {
+    const confirmarSenha = document.getElementById('inputConfirma')['value'];
+    if (this.registerForm.controls['password'].value == confirmarSenha) {
       if(this.registerForm.valid){
         this.user = Object.assign({}, this.registerForm.value);
         //this.validateStart(this.session.startTime);
@@ -102,11 +103,11 @@ export class FormUsersComponent implements OnInit {
   }
 
   updateUser(): void {
-    if (this.registerForm.controls['password'].value == this.registerForm.controls['confimarPassword']) {
+    if (this.registerForm.valid) {
       this.user = Object.assign({}, this.registerForm.value);
       this.user.id = this.data.user.id;
   
-      this.userService.Update(`${Global.BASE_URL_API}/movie`, this.user)
+      this.userService.Update(`${Global.BASE_URL_API}/user`, this.user)
         .subscribe({
           next: userReturn => {
             this.notificationService.showMessage(userReturn.message, userReturn.type);
@@ -118,7 +119,7 @@ export class FormUsersComponent implements OnInit {
           }
         });
     }else{
-      this.notificationService.showMessage("Os campos SENHA e CONFIMAR SENHA são diferentes!", "warning");
+      this.notificationService.showMessage("Por favor, preencha todos os campos!", "warning");
     }
   }
 
@@ -136,6 +137,10 @@ export class FormUsersComponent implements OnInit {
         this.router.navigateByUrl("load", {state: {route: 'users'}});
       }
     })
+  }
+
+  cancel(){
+    this.router.navigateByUrl('users');
   }
 
   formatDate(){

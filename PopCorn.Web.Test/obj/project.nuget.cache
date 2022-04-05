@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PPK2+dolvcpmqgOvka5OUmgh97JDUZVQTOLXXhbOjJGjM5d9JHf53GAcI9vqtKYqthwXIrHwrU3fQh/rGyFqJw==",
+  "dgSpecHash": "+hQvDYDpmS/RvpKkFD4AN+J78VkyW664vdIyTj83CFyD+qe9oDuacHwODA40E9N5DCo5A97WMrMLfMboxreCmA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kellt\\Documents\\Gerenciador-Cinema\\Gerenciador-Cinema\\PopCorn.Web.Test\\PopCorn.Web.Test.csproj",
+  "projectFilePath": "C:\\Users\\kellt\\Documents\\PopCorn\\PopCorn.Web.Test\\PopCorn.Web.Test.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kellt\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\kellt\\.nuget\\packages\\coverlet.collector\\3.0.2\\coverlet.collector.3.0.2.nupkg.sha512",
@@ -178,10 +178,7 @@
     "C:\\Users\\kellt\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
     "C:\\Users\\kellt\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
     "C:\\Users\\kellt\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
-    "C:\\Users\\kellt\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512",
-    "C:\\Users\\kellt\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\kellt\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\kellt\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\kellt\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
   ],
   "logs": []
 }

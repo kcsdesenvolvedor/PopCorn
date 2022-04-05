@@ -22,10 +22,10 @@
           <input matInput type="text" formControlName="password">
         </mat-form-field>
         <mat-form-field>
-            <mat-label>Confimar Senha</mat-label>
-            <input matInput type="text" formControlName="confirmarPassword">
+          <mat-label>Confirmar Senha</mat-label>
+          <input matInput type="text" id="inputConfirma">
         </mat-form-field>
-        <mat-form-field>
+        <mat-form-field *ngIf="isUpdate">
             <mat-label>Data de Criação</mat-label>
             <input matInput type="text" formControlName="dateCreate">
         </mat-form-field>
@@ -36,7 +36,7 @@
       {{data.btnTitle}}
       </button>
       
-      <button mat-raised-button routerLink="users" color="danger">
+      <button mat-raised-button (click)="cancel()" color="danger">
       Cancelar
       </button>
     </form>

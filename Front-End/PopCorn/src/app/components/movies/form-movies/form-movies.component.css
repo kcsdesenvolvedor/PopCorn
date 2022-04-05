@@ -12,17 +12,20 @@ div {
   }
   
   #imageMovie {
-    max-width: 300px;
-    max-height: 300px;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 5px;
   }
   
   #image {
-    display: block;
     margin-left: 0;
     margin-right: auto;
-    margin-bottom: 10px;
     width: 60%;
-    
+    height: 90%;
+  }
+
+  #nameImage {
+    margin: 5px 0px 5px 0px;
   }
   
   #formFileLg {
