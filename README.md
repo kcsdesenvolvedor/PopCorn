@@ -1,7 +1,7 @@
 # Projeto Gerenciamento de Cinema PopCorn - 
 
-O projeto utiliza a versão 13.3.1. do [Angular CLI](https://github.com/angular/angular-cli).
-Essa é a versão do Node instalado -> Node: 16.14.2
+<p>O projeto utiliza a versão 13.3.1. do [Angular CLI](https://github.com/angular/angular-cli).</p>
+<p>Essa é a versão do Node instalado -> Node: 16.14.2</p>
 
 
 ## Começando
