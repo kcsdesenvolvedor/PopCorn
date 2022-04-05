@@ -6,6 +6,10 @@
 
 ## Começando
 
-1. npm install
-2. npm start, se tiver o aungular instalado abra o arquivo no VsCode e digite no terminal(Ctrl+Shift+') ng serve.
-3. se o endereço da Api estiver mudado por favor alterar no arquivo Global.ts que fica na pasta src/Shared/, por padrão o endereço é http://localhost:5000/v1.
+1. Clone o a pasta PopCorn para sua maquina. Ex: "git clone https://github.com/kcsdesenvolvedor/PopCorn.git".
+2. Acesse a pasta Front-End e abra o gitbash ou o cmd e rode o comando "npm install" para gerar a pasta node_module.
+3. Abra a pasta Back-End e dê um duplo click na solução do projeto. "PopCorn.Web.sln".
+4. No VisualStudio rode o projeto com PopCorn.Web.
+5. Se rodar o projeto com o IIS Express o endereço da Api vai mudar. Por padrão o endereço está configurado para http://localhost:5000/v1, se for alterado por favor configure no arquivo Global.ts que fica na pasta src/Shared/ do Angular.
+6. Digite npm start para rodar o projeto.
+
